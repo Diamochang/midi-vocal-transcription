@@ -26,7 +26,7 @@ print('basename: ' + basename)
 !python /content/icassp2022-vocal-transcription/src/singing_transcription.py -i "../audio/{file_name}" -o ../output -ot fps
 #@markdown 输入BPM曲速，可至 https://tunebat.com/Analyzer 查询。
 bpm = "70" #@param {type:"string"}
-!python /content/icassp2022-vocal-transcription/src/txt2csv.py -bpm {bpm} ../output/{basename}.txt
+!python /content/icassp2022-vocal-transcription/src/txt2csv.py -bpm {bpm} "../output/{basename}.txt"
 #更改txr2midi文件名称
 %cd /content/icassp2022-vocal-transcription/output/results/midi
 !mv {basename}.mid  {basename}_text2midi.mid
