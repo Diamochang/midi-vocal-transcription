@@ -1,7 +1,8 @@
 ## Colab
-<a target="_blank" href="[https://github.com/seq2193/icassp2022-vocal-transcription/blob/main/One_Key_Colab.ipynb](https://colab.research.google.com/github/seq2193/icassp2022-vocal-transcription/blob/main/One_Key_Colab.ipynb)">
+<a target="_blank" href="https://colab.research.google.com/drive/1MDQKd2zwOO_mhPUe_0XuQ4TiYluuUkBz?usp=sharing">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
+
 
 # icassp2022-vocal-transcription + text2midi Colab One Key一键转换
 整合此篇的text2midi 製作成一鍵colab上傳音頻文件自動轉換、並且改名後壓縮並自動下載<[link](https://www.bilibili.com/video/BV1iF411F7zq/)>
