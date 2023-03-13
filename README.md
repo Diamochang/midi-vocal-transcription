@@ -1,5 +1,5 @@
 ## Colab
-<a target="_blank" href="https://github.com/seq2193/icassp2022-vocal-transcription/blob/main/One_Key_Colab.ipynb">
+<a target="_blank" href="[https://github.com/seq2193/icassp2022-vocal-transcription/blob/main/One_Key_Colab.ipynb](https://colab.research.google.com/github/seq2193/icassp2022-vocal-transcription/blob/main/One_Key_Colab.ipynb)">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
