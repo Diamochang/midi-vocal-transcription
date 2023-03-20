@@ -13,6 +13,7 @@
 !git clone https://github.com/seq2193/icassp2022-vocal-transcription
 !pip install -r /content/icassp2022-vocal-transcription/requirements.txt
 !pip install xlutils
+!pip install numpy==1.20 tensorflow==2.7.0
 !rm -rf /content/icassp2022-vocal-transcription/output/output.txt
 ```
 
