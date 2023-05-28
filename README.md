@@ -9,6 +9,16 @@
 
 # Copy this code and paste it in colab 1.
 ```
+#@title Colab Python 3.9
+!wget -O mini.sh https://repo.anaconda.com/miniconda/Miniconda3-py39_4.9.2-Linux-x86_64.sh
+!chmod +x mini.sh
+!bash ./mini.sh -b -f -p /usr/local
+!conda install -q -y jupyter
+!conda install -q -y google-colab -c conda-forge
+!python -m ipykernel install --name "py39" --user
+```
+# Copy this code and paste it in colab 2.
+```
 #@title 配置环境安装依赖
 !git clone https://github.com/seq2193/icassp2022-vocal-transcription
 !pip install -r /content/icassp2022-vocal-transcription/requirements.txt
@@ -17,7 +27,7 @@
 !rm -rf /content/icassp2022-vocal-transcription/output/output.txt
 ```
 
-# Copy this code and paste it in colab 2.
+# Copy this code and paste it in colab 3.
 ```
 #@title 上传音频文件.mp3 .wav 一键转换
 %cd /content/icassp2022-vocal-transcription/audio
