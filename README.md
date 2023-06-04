@@ -1,5 +1,5 @@
 ## Colab
-<a target="_blank" href="https://colab.research.google.com/drive/1MDQKd2zwOO_mhPUe_0XuQ4TiYluuUkBz?usp=sharing">
+<a target="_blank" href="https://drive.google.com/file/d/1wxHm-zlpK6QwEMxglJA-pnCT-QR7-YV-/view?usp=sharing">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
