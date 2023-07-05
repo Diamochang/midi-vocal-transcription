@@ -1,5 +1,5 @@
 ## Colab
-<a target="_blank" href="https://drive.google.com/file/d/1wxHm-zlpK6QwEMxglJA-pnCT-QR7-YV-/view?usp=sharing">
+<a target="_blank" href="https://colab.research.google.com/github/Pluseen/icassp2022-vocal-transcription/blob/main/One_Key_Colab.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
