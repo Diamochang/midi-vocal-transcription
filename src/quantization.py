@@ -23,7 +23,7 @@ def calc_tempo(path_audio):
     """
     target_sr = 22050
     y, _ = read_audio(path_audio, sr=target_sr)
-    onset_strength = librosa.onset.onset_strength(y, sr=target_sr)
+    onset_strength = librosa.onset.onset_strength(y=y, sr=target_sr)
     tempo = librosa.beat.tempo(onset_envelope=onset_strength, sr=target_sr)
     return tempo
 
