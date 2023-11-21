@@ -9,21 +9,19 @@
 
 # Copy this code and paste it in colab 1.
 ```
-#@title Colab Python 3.9
-!wget -O mini.sh https://repo.anaconda.com/miniconda/Miniconda3-py39_4.9.2-Linux-x86_64.sh
-!chmod +x mini.sh
-!bash ./mini.sh -b -f -p /usr/local
-!conda install -q -y jupyter
-!conda install -q -y google-colab -c conda-forge
-!python -m ipykernel install --name "py39" --user
+#@title Colab Python 3.9（停用）
+#!wget -O mini.sh https://repo.anaconda.com/miniconda/Miniconda3-py39_4.9.2-Linux-x86_64.sh
+#!chmod +x mini.sh
+#!bash ./mini.sh -b -f -p /usr/local
+#!conda install -q -y jupyter
+#!conda install -q -y google-colab -c conda-forge
+#!python -m ipykernel install --name "py39" --user
 ```
 # Copy this code and paste it in colab 2.
 ```
 #@title 配置环境安装依赖
 !git clone https://github.com/seq2193/icassp2022-vocal-transcription
-!pip install -r /content/icassp2022-vocal-transcription/requirements.txt
-!pip install xlutils
-!pip install numpy==1.20 tensorflow==2.7.0
+!pip install pydub pretty_midi xlwt xlutils
 !rm -rf /content/icassp2022-vocal-transcription/output/output.txt
 ```
 
@@ -42,14 +40,16 @@ print('basename: ' + basename)
 
 !python /content/icassp2022-vocal-transcription/src/singing_transcription.py -i "../audio/{file_name}" -o ../output -ot fps
 #@markdown 输入BPM曲速，可至 https://tunebat.com/Analyzer 查询。
-bpm = "70" #@param {type:"string"}
+
+#@markdown 输入BPM曲速，可至 https://songbpm.com/ 查询。
+bpm = "94" #@param {type:"string"}
 !python /content/icassp2022-vocal-transcription/src/txt2csv.py -bpm {bpm} "../output/{basename}.txt"
 #更改txr2midi文件名称
 %cd /content/icassp2022-vocal-transcription/output/results/midi
 !mv {basename}.mid  {basename}_text2midi.mid
 %cd /content/icassp2022-vocal-transcription
 #压缩并下载
-!zip -r midi.zip output 
+!zip -r midi.zip output
 from google.colab import files
 files.download("midi.zip")
 ```
