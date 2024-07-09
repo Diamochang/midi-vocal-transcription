@@ -1,32 +1,22 @@
 ## Colab
-<a target="_blank" href="https://colab.research.google.com/github/Pluseen/icassp2022-vocal-transcription/blob/main/icassp2022_vocal_transcription.ipynb">
+<a target="_blank" href="https://colab.research.google.com/github/Diamochang/midi-vocal-transcription/blob/main/One_Key_Colab.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
 
-# icassp2022-vocal-transcription + text2midi Colab One Key一键转换
-整合此篇的text2midi 製作成一鍵colab上傳音頻文件自動轉換、並且改名後壓縮並自動下載<[link](https://www.bilibili.com/video/BV1iF411F7zq/)>
+# icassp2022-vocal-transcription + text2midi Colab One Key 一键转换
+整合此篇的 text2midi 製作成一鍵 Google Colab 上傳音頻文件自動轉換、並且改名後壓縮並自動下載<[link](https://www.bilibili.com/video/BV1iF411F7zq/)>
 
 # Copy this code and paste it in colab 1.
-```
-#@title Colab Python 3.9（停用）
-#!wget -O mini.sh https://repo.anaconda.com/miniconda/Miniconda3-py39_4.9.2-Linux-x86_64.sh
-#!chmod +x mini.sh
-#!bash ./mini.sh -b -f -p /usr/local
-#!conda install -q -y jupyter
-#!conda install -q -y google-colab -c conda-forge
-#!python -m ipykernel install --name "py39" --user
-```
-# Copy this code and paste it in colab 2.
-```
+```jupyter
 #@title 配置环境安装依赖
-!git clone https://github.com/seq2193/icassp2022-vocal-transcription
+!git clone https://github.com/keums/icassp2022-vocal-transcription
 !pip install pydub pretty_midi xlwt xlutils
 !rm -rf /content/icassp2022-vocal-transcription/output/output.txt
 ```
 
 # Copy this code and paste it in colab 3.
-```
+```jupyter
 #@title 上传音频文件.mp3 .wav 一键转换
 %cd /content/icassp2022-vocal-transcription/audio
 import os
@@ -54,7 +44,7 @@ from google.colab import files
 files.download("midi.zip")
 ```
 
-# icassp2022-vocal-transcription
+# 原项目简介
 Companion code for the paper:
 Sangeun Kum, Jongpil Lee, Keunhyoung Luke Kim, Taehyoung Kim, Juhan Nam *"Pseudo-Label Transfer from Frame-level to Note-level in a Teacher-student Framework for Singing Transcription from Polyphonic Music"*, ICASSP2022, Singapore <[link](https://ieeexplore.ieee.org/document/9747147)>
 
