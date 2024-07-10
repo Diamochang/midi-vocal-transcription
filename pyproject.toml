@@ -2,18 +2,16 @@
 name = "midi-vocal-transcription"
 version = "0.1.0"
 description = "Run code for the following paper: Pseudo-Label Transfer from Frame-level to Note-level in a Teacher-student Framework for Singing Transcription from Polyphonic Music, ICASSP2022, Singapore"
-
 authors = [
     "Diamochang (Mike Wang) <diamochang@yeah.net>"
 ]
-
 repository = "https://github.com/Diamochang/midi-vocal-transcription"
-
 # README file(s) are used as the package description
 readme = ["README.md"]
-
 # Keywords (translated to tags on the package index)
 keywords = ["music", "MIDI", "UTAU", "VOCOLOID"]
+# Disable package mode
+package-mode = false
 
 [tool.poetry.dependencies]
 # Compatible Python versions
