@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "colab-midi-vocal-transcription"
+version = "0.1.0"
+description = "Run code for the following paper: Sangeun Kum, Jongpil Lee, Keunhyoung Luke Kim, Taehyoung Kim, Juhan Nam "Pseudo-Label Transfer from Frame-level to Note-level in a Teacher-student Framework for Singing Transcription from Polyphonic Music", ICASSP2022, Singapore"
+
+authors = [
+    "Diamochang (Mike Wang) <diamochang@yeah.net>"
+]
+
+repository = "https://github.com/Diamochang/midi-vocal-transcription"
+
+# README file(s) are used as the package description
+readme = ["README.md"]
+
+# Keywords (translated to tags on the package index)
+keywords = ["music", "MIDI", "UTAU", "VOCOLOID"]
+
+[tool.poetry.dependencies]
+# Compatible Python versions
+python = ">=3.9"
+# Standard dependency with semver constraints
+keras = "2.8.0"
+numpy = "1.20.3"
+librosa = "0.8.1"
+mir-eval = "0.6"
+pretty-midi = "0.2.9"
+pydub = "0.25.1"
+scipy = "1.8.0"
+tensorflow = "2.8.0"

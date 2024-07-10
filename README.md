@@ -1,53 +1,20 @@
-## Colab
-<a target="_blank" href="https://colab.research.google.com/github/Diamochang/midi-vocal-transcription/blob/main/One_Key_Colab.ipynb">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
-</a>
-
-
 # icassp2022-vocal-transcription + text2midi Colab One Key 一键转换
-整合此篇的 text2midi 製作成一鍵 Google Colab 上傳音頻文件自動轉換、並且改名後壓縮並自動下載<[link](https://www.bilibili.com/video/BV1iF411F7zq/)>
+<a target="_blank" href="https://colab.research.google.com/github/Diamochang/midi-vocal-transcription/blob/main/One_Key_Colab.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="在 Colab 中打开"/>
+</a>
+本仓库提供一个 Jupyter 笔记本，通过特殊设计使其可以在 Google Colab 上一键执行 ICASSP2022 论文“Pseudo-Label Transfer from Frame-Level to Note-Level in a Teacher-Student Framework for Singing Transcription from Polyphonic Music”作者提供的完整源代码，实现在线扒人声 MIDI 谱。仓库同时包含上述源代码的最新副本和经调整后的依赖文件（位于`pyproject.toml`），以便执行。（[示例](https://www.bilibili.com/video/BV1iF411F7zq/)）
 
-# Copy this code and paste it in colab 1.
-```jupyter
-#@title 配置环境安装依赖
-!git clone https://github.com/keums/icassp2022-vocal-transcription
-!pip install pydub pretty_midi xlwt xlutils
-!rm -rf /content/icassp2022-vocal-transcription/output/output.txt
-```
+只需点击上面的徽章，然后点击“代码执行程序”下的“全部运行”，就可以在 Colab 中运行该笔记本。
 
-# Copy this code and paste it in colab 3.
-```jupyter
-#@title 上传音频文件.mp3 .wav 一键转换
-%cd /content/icassp2022-vocal-transcription/audio
-import os
-from google.colab import files
-uploaded = files.upload()
-file_name = list(uploaded.keys())[0]
-print(file_name)
-
-basename = os.path.splitext(os.path.basename(file_name))[0]
-print('basename: ' + basename)
-
-!python /content/icassp2022-vocal-transcription/src/singing_transcription.py -i "../audio/{file_name}" -o ../output -ot fps
-#@markdown 输入BPM曲速，可至 https://tunebat.com/Analyzer 查询。
-
-#@markdown 输入BPM曲速，可至 https://songbpm.com/ 查询。
-bpm = "94" #@param {type:"string"}
-!python /content/icassp2022-vocal-transcription/src/txt2csv.py -bpm {bpm} "../output/{basename}.txt"
-#更改txr2midi文件名称
-%cd /content/icassp2022-vocal-transcription/output/results/midi
-!mv {basename}.mid  {basename}_text2midi.mid
-%cd /content/icassp2022-vocal-transcription
-#压缩并下载
-!zip -r midi.zip output
-from google.colab import files
-files.download("midi.zip")
-```
+# 故障报告
+建议先阅读[《提问的智慧》](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md)，确认理解其内容后再打开 Issues。
+## Python 问题
+请将能够反映问题的输出截屏或保存在本地，然后打开一个新的 Issue，详细说明故障及复现步骤，并提供上述输出。如果你为了解决该故障修改了笔记本内容，那么需要点一次“代码执行程序”下的“断开连接并删除运行时”，重置远程资源后再点击“全部运行”，如还有故障就把输出截屏或保存，发表 Issue 时一起提供。
+## Colab 问题
+将 Colab 的报错内容截屏，然后打开一个新的 Issue，详细说明故障及复现步骤，并提供上述截屏。如果你为了解决该故障修改了笔记本内容，那么需要点一次“代码执行程序”下的“断开连接并删除运行时”，重置远程资源后再点击“全部运行”，如还有故障就把报错内容截屏，发表 Issue 时一起提供。
 
 # 原项目简介
-Companion code for the paper:
-Sangeun Kum, Jongpil Lee, Keunhyoung Luke Kim, Taehyoung Kim, Juhan Nam *"Pseudo-Label Transfer from Frame-level to Note-level in a Teacher-student Framework for Singing Transcription from Polyphonic Music"*, ICASSP2022, Singapore <[link](https://ieeexplore.ieee.org/document/9747147)>
-
+论文：Sangeun Kum, Jongpil Lee, Keunhyoung Luke Kim, Taehyoung Kim, Juhan Nam *"Pseudo-Label Transfer from Frame-level to Note-level in a Teacher-student Framework for Singing Transcription from Polyphonic Music"*, ICASSP2022, Singapore <[link](https://ieeexplore.ieee.org/document/9747147)>
 
 ## Abstract
 
@@ -89,6 +56,7 @@ $ python singing_transcription.py -i ../audio/test.wav  -o ../output
 ```
 - output example: ADC04-pop1.wav
   <img src="./img/example_pop1_midi.png" width="100%">
+
 # Citation
 If you find our work useful, please consider citing our paper.
 
