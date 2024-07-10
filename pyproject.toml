@@ -17,7 +17,7 @@ keywords = ["music", "MIDI", "UTAU", "VOCOLOID"]
 
 [tool.poetry.dependencies]
 # Compatible Python versions
-python = ">=3.9"
+python = ">=3.9,<3.11"
 # Standard dependency with semver constraints
 keras = "2.8.0"
 numpy = "1.20.3"
