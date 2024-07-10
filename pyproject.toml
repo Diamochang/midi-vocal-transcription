@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "colab-midi-vocal-transcription"
 version = "0.1.0"
-description = "Run code for the following paper: Sangeun Kum, Jongpil Lee, Keunhyoung Luke Kim, Taehyoung Kim, Juhan Nam "Pseudo-Label Transfer from Frame-level to Note-level in a Teacher-student Framework for Singing Transcription from Polyphonic Music", ICASSP2022, Singapore"
+description = "Run code for the following paper: Pseudo-Label Transfer from Frame-level to Note-level in a Teacher-student Framework for Singing Transcription from Polyphonic Music, ICASSP2022, Singapore"
 
 authors = [
     "Diamochang (Mike Wang) <diamochang@yeah.net>"
