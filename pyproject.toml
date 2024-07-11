@@ -17,6 +17,8 @@ package-mode = false
 # Compatible Python versions
 python = ">=3.9,<3.11"
 # Standard dependency with semver constraints
+protobuf = "3.20.3" # Solve "TypeError: Descriptors cannot be created directly." from tensorflow
+pandas = "1.5.2" # For txt2csv.py
 keras = "2.8.0"
 numpy = "1.24.1"
 librosa = "0.8.1"
