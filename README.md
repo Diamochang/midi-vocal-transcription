@@ -3,7 +3,7 @@
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="在 Colab 中打开"/>
 </a>
 
-本仓库提供一个 Jupyter 笔记本，通过特殊设计使其可以在 Google Colab 上一键执行[一篇 ICASSP2022 论文](#原项目简介)随附的完整源代码，实现在线扒人声 MIDI 谱。仓库同时包含上述源代码的最新副本和经调整后的依赖文件（位于`pyproject.toml`），以便执行。（[示例](https://www.bilibili.com/video/BV1iF411F7zq/)）
+本仓库提供一个 Jupyter 笔记本，通过特殊设计使其可以在 Google Colab 上一键执行[一篇 ICASSP2022 论文](#原项目简介)随附的完整源代码，实现在线扒人声 MIDI 谱。仓库同时包含上述源代码的最新副本和经调整后的依赖文件（位于`pyproject.toml` 和 `requirements.txt`），以便执行。（[示例](https://www.bilibili.com/video/BV1iF411F7zq/)）
 
 只需点击上面的徽章进入 Colab，仔细阅读说明文本并按说明准备人声音频和设置 BPM，然后点击“代码执行程序”下的“全部运行”，就可以在 Colab 中运行该笔记本。
 
