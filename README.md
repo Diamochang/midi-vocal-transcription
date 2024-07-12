@@ -40,7 +40,7 @@ To validate the method, we conduct various experiment settings by investigating 
   - Librosa 0.8.1 (for STFT)  
   - pydub 0.25.1 (for loading audio and resampling)
   - pretty-midi (for handling midi data)
-  - Numpy, SciPy *注：为保证正常运行，依赖文件中 NumPy 设置为论文发表当年的最后一个正式版本（1.24.1），SciPy 调整为 1.8.0。
+  - Numpy, SciPy *注：为保证正常运行，依赖文件中 NumPy 设置为模型的 C-API 最大支持版本（1.23.5），SciPy 调整为 1.8.0。
 
 - Hardware
   - 1 GPU : GeForce GTX 3090
